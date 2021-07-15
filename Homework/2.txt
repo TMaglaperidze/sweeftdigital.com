@@ -1,0 +1,70 @@
+using System;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+
+        static int minSplit(int amount)
+        {
+            int raodenoba = 0;
+            int nashti = 0;
+            int[] tetri = { 50, 20, 10, 5, 1 };
+
+            if (amount == 0)
+                raodenoba = 0;
+            else if (amount == 1)
+                raodenoba = 1;
+
+            else
+            {
+                for (int i = 0; i < tetri.Length - 1; i++)
+                {
+                    if (amount >= tetri[i])
+                    {
+                        raodenoba += amount / tetri[i];
+                        nashti = amount % tetri[i];
+                        break;
+                    }
+                }
+
+                if (nashti >= tetri[1])
+                {
+                    raodenoba += nashti / tetri[1];
+                    nashti = nashti % tetri[1];
+                }
+
+                if (nashti >= tetri[2])
+                {
+                    raodenoba += nashti / tetri[2];
+                    nashti = nashti % tetri[2];
+                }
+
+                if (nashti >= tetri[3])
+                {
+                    raodenoba += nashti / tetri[3];
+                    nashti = nashti % tetri[3];
+                }
+
+                if (nashti >= tetri[4])
+                {
+                    raodenoba += nashti / tetri[4];
+                    nashti = nashti % tetri[4];
+                }
+
+            }
+
+
+
+            return raodenoba;
+        
+        }
+
+        static void Main(string[] args)
+        {
+           
+            Console.WriteLine(minSplit(11));
+            Console.WriteLine("Hello World!");
+        }
+    }
+}

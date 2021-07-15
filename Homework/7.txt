@@ -1,0 +1,18 @@
+--create table TBLTeacher
+--(
+-- Teacher_ID int identity(1,1) primary key,
+-- T_Saxeli varchar(20),
+-- T_Gvari varchar(20),
+-- T_Sqesi varchar(4),
+-- T_Sagani varchar(15)
+--)
+
+create table TBLPupil
+(
+ Pupil_ID int identity(1,1) primary key,
+ Teacher int, 
+ P_Saxeli varchar(20),
+ P_Gvari varchar(20),
+ P_Sqesi varchar(4)
+
+)

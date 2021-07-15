@@ -1,0 +1,17 @@
+	Boolean isPalindrome(String text)
+        {
+            string reverse = "";
+            // vnaxot misi shetrialebuli mnishvneloba 
+            for (int i = text.Length - 1; i >= 0; i--)  
+            {
+                reverse += text[i].ToString();
+            }
+            if (reverse == text) // vamowmebt polidromia tu ara 
+            {
+                return true;
+            }
+            else
+            {
+                return false; 
+            }
+        }
